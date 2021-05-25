@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.smushytaco.expanded_axe_enchanting.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "AxesCanHaveFireAspect",
+    "AxesCanHaveKnockback",
+    "AxesCanHaveLooting"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
