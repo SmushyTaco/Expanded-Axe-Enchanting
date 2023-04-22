@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class AxeModification {
     @Shadow
     @Final
-    public EnchantmentTarget type;
+    public EnchantmentTarget target;
     @Inject(method = "isAcceptableItem", at = @At("HEAD"), cancellable = true)
     public void isAcceptableItem(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         Enchantment enchantment = (Enchantment) (Object) this;
@@ -24,7 +24,7 @@ public abstract class AxeModification {
             if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseKnockbackOnAxe() || !(stack.getItem() instanceof AxeItem)) return;
             cir.setReturnValue(true);
         }  else if (enchantment instanceof LuckEnchantment) {
-            if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseLootingOnAxe() || type != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof AxeItem)) return;
+            if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseLootingOnAxe() || target != EnchantmentTarget.WEAPON || !(stack.getItem() instanceof AxeItem)) return;
             cir.setReturnValue(true);
         }
     }
