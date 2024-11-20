@@ -7,6 +7,7 @@ class ModConfiguration: ConfigData {
     val canUseFireAspectOnAxe = true
     val canUseKnockbackOnAxe = true
     val canUseLootingOnAxe = true
+    val canUseImpalingOnAxe = true
     val canUseDensityOnAxe = true
     val canUseBreachOnAxe = true
     val canUseWindBurstOnAxe = true

@@ -20,6 +20,9 @@ public abstract class AxeModification {
         } else if (ExpandedAxeEnchanting.INSTANCE.isSameEnchantment(enchantment, Enchantments.LOOTING)) {
             if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseLootingOnAxe() || !(stack.getItem() instanceof AxeItem)) return original;
             return true;
+        } else if (ExpandedAxeEnchanting.INSTANCE.isSameEnchantment(enchantment, Enchantments.IMPALING)) {
+            if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseImpalingOnAxe() || !(stack.getItem() instanceof AxeItem)) return original;
+            return true;
         } else if (ExpandedAxeEnchanting.INSTANCE.isSameEnchantment(enchantment, Enchantments.DENSITY)) {
             if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseDensityOnAxe() || !(stack.getItem() instanceof AxeItem)) return original;
             return true;
