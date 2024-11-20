@@ -17,8 +17,17 @@ public abstract class AxeModification {
         } else if (ExpandedAxeEnchanting.INSTANCE.isSameEnchantment(enchantment, Enchantments.KNOCKBACK)) {
             if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseKnockbackOnAxe() || !(stack.getItem() instanceof AxeItem)) return original;
             return true;
-        }  else if (ExpandedAxeEnchanting.INSTANCE.isSameEnchantment(enchantment, Enchantments.LOOTING)) {
+        } else if (ExpandedAxeEnchanting.INSTANCE.isSameEnchantment(enchantment, Enchantments.LOOTING)) {
             if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseLootingOnAxe() || !(stack.getItem() instanceof AxeItem)) return original;
+            return true;
+        } else if (ExpandedAxeEnchanting.INSTANCE.isSameEnchantment(enchantment, Enchantments.DENSITY)) {
+            if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseDensityOnAxe() || !(stack.getItem() instanceof AxeItem)) return original;
+            return true;
+        } else if (ExpandedAxeEnchanting.INSTANCE.isSameEnchantment(enchantment, Enchantments.BREACH)) {
+            if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseBreachOnAxe() || !(stack.getItem() instanceof AxeItem)) return original;
+            return true;
+        } else if (ExpandedAxeEnchanting.INSTANCE.isSameEnchantment(enchantment, Enchantments.WIND_BURST)) {
+            if (!ExpandedAxeEnchanting.INSTANCE.getConfig().getCanUseWindBurstOnAxe() || !(stack.getItem() instanceof AxeItem)) return original;
             return true;
         }
         return original;

@@ -2,5 +2,8 @@
   "text.autoconfig.expanded_axe_enchanting.title": "Expanded Axe Enchanting Configuration",
   "text.autoconfig.expanded_axe_enchanting.option.canUseFireAspectOnAxe": "Can Use Fire Aspect On Axe",
   "text.autoconfig.expanded_axe_enchanting.option.canUseKnockbackOnAxe": "Can Use Knockback On Axe",
-  "text.autoconfig.expanded_axe_enchanting.option.canUseLootingOnAxe": "Can Use Looting On Axe"
+  "text.autoconfig.expanded_axe_enchanting.option.canUseLootingOnAxe": "Can Use Looting On Axe",
+  "text.autoconfig.expanded_axe_enchanting.option.canUseDensityOnAxe": "Can Use Density On Axe",
+  "text.autoconfig.expanded_axe_enchanting.option.canUseBreachOnAxe": "Can Use Breach On Axe",
+  "text.autoconfig.expanded_axe_enchanting.option.canUseWindBurstOnAxe": "Can Use Wind Burst On Axe"
 }
