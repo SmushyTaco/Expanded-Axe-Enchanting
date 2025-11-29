@@ -1,14 +1,15 @@
 package com.smushytaco.expanded_axe_enchanting.mixins;
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.smushytaco.expanded_axe_enchanting.ExpandedAxeEnchanting;
-import net.minecraft.enchantment.*;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 @Mixin(Enchantment.class)
 public abstract class AxeModification {
-    @ModifyReturnValue(method = "isAcceptableItem", at = @At("RETURN"))
+    @ModifyReturnValue(method = "canEnchant", at = @At("RETURN"))
     public boolean isAcceptableItem(boolean original, ItemStack stack) {
         Enchantment enchantment = (Enchantment) (Object) this;
         if (ExpandedAxeEnchanting.INSTANCE.isSameEnchantment(enchantment, Enchantments.FIRE_ASPECT)) {
